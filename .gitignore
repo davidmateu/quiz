@@ -1,7 +1,9 @@
 .gitattributes
 .gitat
-quiz.sublime-project
-quiz.sublime-workspace
 node_modules/
 .DS_Store
 npm-debug.log
+*.sublime*
+*.sublime-workspace
+quiz.sublime-workspace
+quiz.sublime-project
