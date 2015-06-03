@@ -171,6 +171,31 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "bin/www",
+			"settings":
+			{
+				"buffer_size": 260,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 1477,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "//20",
+			"settings":
+			{
+				"buffer_size": 4,
+				"line_ending": "Windows",
+				"name": "//20"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -220,6 +245,20 @@
 	},
 	"file_history":
 	[
+		"/C/Users/dmateu/Desktop/CCCPreferenceFragment.java",
+		"/C/Users/dmateu/Desktop/CCCPreference.java",
+		"/C/Users/dmateu/Desktop/MainActivity.java",
+		"/C/Users/dmateu/Desktop/Music.java",
+		"/C/Users/dmateu/Desktop/Game.java",
+		"/C/Users/dmateu/Desktop/Initial.java",
+		"/C/Users/dmateu/Desktop/About.java",
+		"/C/Users/dmateu/Desktop/AlertDialogFragment.java",
+		"/C/Users/dmateu/Desktop/Fragment1.java",
+		"/C/Users/dmateu/Desktop/Fragment2.java",
+		"/C/Users/dmateu/Desktop/Detail.java",
+		"/C/Users/dmateu/Documents/GitHub/express/quiz/node_modules/debug/debug.js",
+		"/C/Users/dmateu/Documents/GitHub/express/quiz/node_modules/debug/package.json",
+		"/C/Users/dmateu/Documents/GitHub/express/quiz/.gitignore",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/ - copia.gitattributes",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/bin/www",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/views/index.ejs",
@@ -333,21 +372,7 @@
 		"/C/xampp/htdocs/bicielx/libs/tcpdf/tcpdf.php",
 		"/C/xampp/htdocs/bicielx/pdf_orden_sepa.php",
 		"/C/xampp/htdocs/bicielx/scripts/pdf/class.ezpdf.php",
-		"/C/xampp/htdocs/bicielx/scripts/pdf/class.pdf.php",
-		"/C/xampp/htdocs/pruebasEE/cron_pdf.php",
-		"/C/xampp/htdocs/bicielx/factura_imprimir.php",
-		"/C/xampp/htdocs/pruebasEE/pdf.php",
-		"/C/xampp/htdocs/pruebasEE/libPHP/Clases/pdf/class.pdf.php",
-		"/C/xampp/htdocs/pruebasEE/libPHP/Clases/pdf/class.ezpdf.php",
-		"/C/submit_login.php",
-		"/C/login.html",
-		"/C/login.php",
-		"/C/error_log",
-		"/C/Users/dmateu/Desktop/0.12-rc19/examples/unicode.php",
-		"/C/xampp/htdocs/bicielx/scripts/pdf/Cezpdf.php",
-		"/C/Users/dmateu/Desktop/0.12-rc19/examples/unicode-file.php",
-		"/C/xampp/htdocs/bicielx/usuario_buscar.php",
-		"/C/xampp/htdocs/bicielx/usuario_buscar_ajax.php"
+		"/C/xampp/htdocs/bicielx/scripts/pdf/class.pdf.php"
 	],
 	"find":
 	{
@@ -365,6 +390,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"star",
 			"USUARIOS",
 			"Facturas a remesar",
 			"tipo_descripcion",
@@ -491,8 +517,7 @@
 			"OPERACION",
 			"<FORM",
 			"NIF NO VA",
-			"preven",
-			"seleccionar_todo"
+			"preven"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -538,8 +563,236 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "bin/www",
+					"settings":
+					{
+						"buffer_size": 260,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Notepad++.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app.js",
+					"settings":
+					{
+						"buffer_size": 1477,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Notepad++.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 798.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"settings":
+					{
+						"buffer_size": 4,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4,
+								4
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_name": "//20",
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Notepad++.tmTheme",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1105,8 +1358,12 @@
 		"selected_items":
 		[
 			[
+				"rec",
+				"/C/xampp/htdocs/reclamaciones/proyect/RECLAMACIONES.sublime-project"
+			],
+			[
 				"",
-				"/C/xampp/htdocs/contrataciones/proyect/CONTRATACIONES.sublime-project"
+				"/C/Users/dmateu/Documents/GitHub/express/quiz/quiz.sublime-project"
 			],
 			[
 				"contr",
