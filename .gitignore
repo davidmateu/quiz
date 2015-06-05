@@ -8,3 +8,7 @@ npm-debug.log
 quiz.sublime-workspace
 quiz.sublime-project
 quiz.sublime-workspace
+Procfile
+quiz.sqlite
+.env
+quiz.sublime-workspace
