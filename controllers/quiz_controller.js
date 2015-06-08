@@ -26,8 +26,6 @@ exports.index = function(req, res){
     res.render('quizes/index.ejs', { quizes: quizes, busqueda: busqueda });
   }).catch(function(error) { next(error); });
 
-
-
 };
 
 
