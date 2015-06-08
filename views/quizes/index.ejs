@@ -1,11 +1,5 @@
-<h2>Busqueda de preguntas</h2>
-<form action="/quizes" method="GET">
-	<input type="text" value='<%= busqueda %>' name='search' placeholder='Parte de la pregunta' autofocus autocomplete='off'>
-	<input type="submit" value='Enviar'>
-</form>
-<br/>
 <h2>Listado de preguntas</h2>
-<table style='margin:auto;'>
+<table>
   <% var i; for (i=0; i < quizes.length; i++) { %>        
      <tr><td><a href="/quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr> 
   <% } %>

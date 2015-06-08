@@ -188,14 +188,6 @@
 	"buffers":
 	[
 		{
-			"contents": " \npostgres://wvvcoazlxlhuhi:_3i7CdYZKyl-cMNOZCCk4X4DmO@ec2-50-19-233-111.compute-1.amazonaws.com:5432/d6n5j97aop3t3n\n\n",
-			"settings":
-			{
-				"buffer_size": 118,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"contents": "Ejercicio P2P Obligatorio\n\nExplicación de la tarea\nAñadir a Quiz un Buscador de Preguntas\n\nSe pide añadir un formulario de búsqueda en la página que muestra la lista de preguntas (/quizes). El formulario tendrá un campo para introducir el texto a buscar, y un botón enviar (submit). El resultado de la búsqueda contendrá todas las preguntas que contengan el texto introducido en el formulario ordenadas alfabéticamente.\n\nEste desarrollo debe realizarse en una rama llamada busquedas, la cual se mezclara con la rama master una vez se haya terminado esta práctica.\n\nLa ruta de la lista de preguntas podrá llevar una query opcional con el texto a buscar, quedando la primitiva del interfaz REST así:\n\nGET  /quizes?search=texto_a_buscar\n\nEsta primitiva devolverá la página con el listado de todas las preguntas que contengan el texto indicado, ordenadas alfabeticamente.\n\nEl formulario de búsqueda deberá ser de tipo GET y enviar un parámetro \"search\" con el texto (string) buscado. De esta forma, si en el formulario se escribe Italia, al pulsar el botón de submit, se enviará al servidor: GET /quizes?search=Italia.\n\nPara implementar esta funcionalidad hay que modificar la acción index del controlador (controllers/quiz_controller.js) para que busque las preguntas que contienen el texto especificado en la query.\n\nPara realizar la búsqueda de las preguntas en la base de datos, use la función findAll de sequelize. Debe usar el operador LIKE y el comodín % en la condición WHERE. Debe usar un formato como este:\n\nfindAll({where: [\"pregunta like ?\", search]}]\n\nNo olvide delimitar el string contenido en search con el comodín % antes y después y cambie también los espacios en blanco por %. De esta forma, si busca \"uno dos\" (\"%uno%dos%\"), mostrará todas las preguntas que tengan \"uno\" seguido de \"dos\", independientemente de lo que haya entre \"uno\" y \"dos\".\nFinalmente, despliegue en heroku su practica y suba los cambios a GitHub.\n \nEntrega en MiriadaX\nSubir un fichero de texto que contenga el URL donde se está ejecutando su práctica en Heroku, y el URL a la página de GitHub que aloja este desarrollo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEjercicio P2P Obligatorio\n\nExplicación de la tarea\nAñadir a cada pregunta un índice temático\n \n\nSe pide añadir un índice temático a cada pregunta introducida que diga si es una pregunta relativa a Humanidades, Ocio, Ciencia o Tecnología.\n\nPara implementar esta funcionalidad habrá que  actualizar el modelo, introduciendo este nuevo campo en la tabla \"Quiz\" de preguntas. Además habra que que actualizar los controladores y las vistas afectados por este cambio.\n\nSe recomienda utilizar el elemento <select> de HTML en los formularios de creación y ediciónpara enviar parámetros de una lista preseleccionada:\n<select name=\"tema\">\n  <option value=\"otro\" selected>Otro</option>\n  <option value=\"humanidades\">Humanidades</option>\n  <option value=\"ocio\">Ocio</option>\n  <option value=\"ciencia\">Ciencia</option>\n  <option value=\"tecnologia\">Tecnología</option>\n</select>\n \nUna vez realizada, se deberá guardar una nueva versión (commit) con esta funcionalidad, la cual se desplegará en heroku y se subirá a GitHub.\n \nEntrega en MiriadaX\nSubir un fichero de texto que contenga el URL donde ha desplegfado su práctica en Heroku, y el URL a la página de GitHub que aloja este desarrollo.\n",
 			"settings":
 			{
@@ -205,34 +197,10 @@
 			}
 		},
 		{
-			"file": "controllers/quiz_controller.js",
+			"file": "models/quiz.js",
 			"settings":
 			{
-				"buffer_size": 818,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "routes/index.js",
-			"settings":
-			{
-				"buffer_size": 536,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/quizes/index.ejs",
-			"settings":
-			{
-				"buffer_size": 185,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/quizes/show.ejs",
-			"settings":
-			{
-				"buffer_size": 229,
+				"buffer_size": 158,
 				"line_ending": "Windows"
 			}
 		},
@@ -240,32 +208,16 @@
 			"file": "models/models.js",
 			"settings":
 			{
-				"buffer_size": 1561,
+				"buffer_size": 813,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "views/layout.ejs",
+			"file": "controllers/quiz_controller.js",
 			"settings":
 			{
-				"buffer_size": 1258,
+				"buffer_size": 513,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": ".env",
-			"settings":
-			{
-				"buffer_size": 55,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app.js",
-			"settings":
-			{
-				"buffer_size": 1475,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -317,16 +269,9 @@
 	},
 	"file_history":
 	[
-		"/C/Users/dmateu/Documents/GitHub/express/quiz/views/layout.ejs",
-		"/C/Users/dmateu/Documents/GitHub/express/quiz/views/quizes/index.ejs",
-		"/C/Users/dmateu/Documents/GitHub/express/quiz/app.js",
-		"/C/Users/dmateu/Documents/GitHub/express/quiz/bin/www",
-		"/C/Users/dmateu/Documents/GitHub/express/quiz/.env",
-		"/C/Users/dmateu/Documents/GitHub/express/quiz/package.json",
-		"/C/Users/dmateu/Documents/GitHub/express/quiz/models/quiz.js",
-		"/C/Users/dmateu/Documents/GitHub/express/quiz/models/models.js",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/.gitignore",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/views/author.ejs",
+		"/C/Users/dmateu/Documents/GitHub/express/quiz/views/layout.ejs",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/routes/index.js",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/public/stylesheets/wide.css",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/public/stylesheets/style.css",
@@ -335,8 +280,11 @@
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/views/quizes/answer.ejs",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/views/index.ejs",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/views/quizes/question.ejs",
+		"/C/Users/dmateu/Documents/GitHub/express/quiz/app.js",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/Procfile",
+		"/C/Users/dmateu/Documents/GitHub/express/quiz/package.json",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/node_modules/express-partials/index.js",
+		"/C/Users/dmateu/Documents/GitHub/express/quiz/bin/www",
 		"/C/Users/dmateu/Documents/GitHub/express/quiz/routes/users.js",
 		"/C/Users/dmateu/Desktop/CCCPreferenceFragment.java",
 		"/C/Users/dmateu/Desktop/CCCPreference.java",
@@ -444,11 +392,15 @@
 		"/C/Users/dmateu/Desktop/ActividadSemana5/res/values/styles.xml",
 		"/C/Users/dmateu/Desktop/ActividadSemana5/res/menu/menu.xml",
 		"/C/Users/dmateu/Desktop/ActividadSemana5/res/values-sw600dp/refs.xml",
-		"/C/Users/dmateu/Desktop/ActividadSemana5/res/xml/preferences.xml"
+		"/C/Users/dmateu/Desktop/ActividadSemana5/res/xml/preferences.xml",
+		"/C/xampp/htdocs/public/preguntas/index.html",
+		"/C/xampp/htdocs/public/server.js",
+		"/C/xampp/htdocs/public/pregunta.html",
+		"/C/xampp/htdocs/bicielx/mail_alta_online.php"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 42.0
 	},
 	"find_in_files":
 	{
@@ -635,86 +587,10 @@
 	"groups":
 	[
 		{
-			"selected": 9,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"settings":
-					{
-						"buffer_size": 118,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								118,
-								118
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_name": "",
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Notepad++.tmTheme",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"settings":
 					{
 						"buffer_size": 3312,
@@ -789,19 +665,95 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "controllers/quiz_controller.js",
+					"buffer": 1,
+					"file": "models/quiz.js",
 					"settings":
 					{
-						"buffer_size": 818,
+						"buffer_size": 158,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								304,
-								304
+								158,
+								158
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_name": "",
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Notepad++.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "models/models.js",
+					"settings":
+					{
+						"buffer_size": 813,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								342,
+								346
 							]
 						],
 						"settings":
@@ -866,470 +818,18 @@
 				},
 				{
 					"buffer": 3,
-					"file": "routes/index.js",
+					"file": "controllers/quiz_controller.js",
 					"settings":
 					{
-						"buffer_size": 536,
+						"buffer_size": 513,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								266,
-								272
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Notepad++.tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "views/quizes/index.ejs",
-					"settings":
-					{
-						"buffer_size": 185,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								24,
-								24
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Notepad++.tmTheme",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "views/quizes/show.ejs",
-					"settings":
-					{
-						"buffer_size": 229,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								82,
-								82
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Notepad++.tmTheme",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "models/models.js",
-					"settings":
-					{
-						"buffer_size": 1561,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								196,
-								196
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Notepad++.tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "views/layout.ejs",
-					"settings":
-					{
-						"buffer_size": 1258,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								840,
-								840
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Notepad++.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 171.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": ".env",
-					"settings":
-					{
-						"buffer_size": 55,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								55,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Notepad++.tmTheme",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app.js",
-					"settings":
-					{
-						"buffer_size": 1475,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1033,
-								1000
+								513,
+								513
 							]
 						],
 						"settings":
@@ -1384,11 +884,10 @@
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Notepad++.tmTheme",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 513.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1437,14 +936,6 @@
 		"height": 0.0,
 		"selected_items":
 		[
-			[
-				"app",
-				"app.js"
-			],
-			[
-				"www",
-				"bin/www"
-			],
 			[
 				".css",
 				"public/stylesheets/style.css"
@@ -1948,6 +1439,14 @@
 			[
 				"contrato.js",
 				"scripts/app/contratos.js"
+			],
+			[
+				"ajax/option",
+				"ajax/contratos_options.php"
+			],
+			[
+				"contr",
+				"clases/Contrato.class.php"
 			]
 		],
 		"width": 0.0
@@ -1992,6 +1491,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 147.0,
+	"side_bar_width": 176.0,
 	"status_bar_visible": true
 }
