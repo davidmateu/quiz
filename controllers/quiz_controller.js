@@ -1,10 +1,12 @@
 var models = require('../models/models.js');
+var util = require("util");
 //GET /quizes
 exports.index = function(req, res){
 	models.Quiz.findAll().then(function(quizes){
-		res.render('quizes/index', {quizes: quizes} );
+		res.render('quizes/index.ejs', {quizes: quizes} );
 	})
 };
+
 
 //GET /quizes/:id
 exports.show = function(req, res){

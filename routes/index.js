@@ -9,9 +9,9 @@ router.get('/', function(req, res) {
 });
 
 /* GET quizes */
-router.get('/quizes',quizController.index);
-router.get('/quizes/:quizID(\\d+)',quizController.show);
-router.get('/quizes/:quizID(\\d+)/answer',quizController.answer);
+router.get('/quizes',					   quizController.index);
+router.get('/quizes/:quizId(\\d+)',        quizController.show);
+router.get('/quizes/:quizId(\\d+)/answer', quizController.answer);
 
 /* GET author */
 router.get('/author', function(req, res) {
