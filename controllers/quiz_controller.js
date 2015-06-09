@@ -6,6 +6,25 @@ exports.load = function (req, res, next, quizId){
 		function(quiz){
 			if(quiz){
 				req.quiz = quiz;
+				var descripcion;
+				switch (quiz.tema){
+					case 1:
+						descripcion = "Humanidades";
+						break;
+					case 2:
+						descripcion = "Ocio";
+						break;
+					case 2:
+						descripcion = "Ciencia";
+						break;
+					case 3:
+						descripcion = "Tecnología";
+						break;
+					case 0:
+					default:
+						descripcion = "Otro";
+				}
+				req.quiz.temadescripcion = descripcion;
 				next();
 			}else{
 				next(new Error('No existe quizId='+quizId));
@@ -13,7 +32,6 @@ exports.load = function (req, res, next, quizId){
 		}	
 	).catch(function(error){next(error);});
 };
-
 
 
 //GET /quizes
@@ -45,7 +63,7 @@ exports.answer = function(req, res){
 //GET /quizes/new
 exports.new = function(req, res){
 	var quiz = models.Quiz.build(	//crea objeto quiz
-		{pregunta: "Pregunta", respuesta: "Respuesta"}
+		{tema: "otro", pregunta: "Pregunta", respuesta: "Respuesta"}
 	);
 	res.render('quizes/new', {quiz: quiz, errors: []});
 };
@@ -58,8 +76,8 @@ exports.create = function(req, res){
 			if (err) {
 				res.render('quizes/new',{quiz: quiz, errors: err.errors});
 			} else{
-				//guardar en DB los campos pregunta y respuesta de quiz
-				quiz.save({fields: ["pregunta", "respuesta"]}).then(function(){
+				//guardar en DB los campos tema, pregunta y respuesta de quiz
+				quiz.save({fields: ["tema", "pregunta", "respuesta"]}).then(function(){
 					res.redirect('/quizes');
 				})	//Redireccion HTTP (URL relativo) lista de preguntas
 			}
@@ -78,6 +96,7 @@ exports.edit = function(req, res){
 //PUT /quizes/:quizId
 exports.update = function(req, res){
 
+	req.quiz.tema = req.body.quiz.tema;	
 	req.quiz.pregunta = req.body.quiz.pregunta;	
 	req.quiz.respuesta = req.body.quiz.respuesta;
 
@@ -89,7 +108,7 @@ exports.update = function(req, res){
 				res.render('quizes/edit',{quiz: req.quiz, errors: err.errors});
 			}else{
 				req.quiz
-				.save({fields: ["pregunta", "respuesta"]}).then(function(){
+				.save({fields: ["tema", "pregunta", "respuesta"]}).then(function(){
 					res.redirect('/quizes');
 				})	//Redireccion HTTP (URL relativo) lista de preguntas
 			}

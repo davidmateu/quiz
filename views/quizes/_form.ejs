@@ -1,6 +1,18 @@
+<label for="seltema" class="rem">Tema:</label>
+<select id="seltema" name="quiz[tema]">
+  <option value="0">Otro</option>
+  <option value="1">Humanidades</option>
+  <option value="2">Ocio</option>
+  <option value="3">Ciencia</option>
+  <option value="4">Tecnología</option>
+</select><br/>
 <label for="preg" class="rem">Pregunta:</label>
 <input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>" /><br/>
 <label for="resp" class="rem">Respuesta:</label>
 <input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>" /><br/>
 <a href="/quizes"><button type="button">Cancelar</button></a>
 <input type="submit" value="Salvar">
+
+<script type="text/javascript">
+	document.getElementById("seltema").selectedIndex = "<%= quiz.tema %>";
+</script>
